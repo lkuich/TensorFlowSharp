@@ -100,20 +100,13 @@ namespace TensorFlow
 			return new TFBuffer (TF_GetAllOpList ());
 		}
 
-		static void CheckSize ()
+		private static bool sizeChecked;
+		internal unsafe static void CheckSize ()
 		{
-			unsafe
-			{
-				if (sizeof (IntPtr) == 4) {
-					Console.Error.WriteLine (
-						"The TensorFlow native libraries were compiled in 64 bit mode, you must run in 64 bit mode\n" +
-						"With Mono, do that with mono --arch=64 executable.exe, if using an IDE like MonoDevelop,\n" +
-						"Xamarin Studio or Visual Studio for Mac, Build/Compiler settings, make sure that " +
-						"\"Platform Target\" has x64 selected.");
-					throw new Exception ();
-
-				}
-			}
+			if (sizeChecked)
+				return;
+			int num = sizeof (IntPtr);
+			sizeChecked = true;
 		}
 	}
 
