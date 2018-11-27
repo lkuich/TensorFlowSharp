@@ -1,3 +1,8 @@
+See branch [1.7.0-il2cpp](https://github.com/lkuich/TensorFlowSharp/tree/1.7.0-il2cpp) for Unity IL2CPP fixes.
+https://github.com/Unity-Technologies/ml-agents/issues/447#issuecomment-437517439
+
+***
+
 [![Build Status](https://travis-ci.org/migueldeicaza/TensorFlowSharp.svg?branch=master)](https://travis-ci.org/migueldeicaza/TensorFlowSharp)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/TensorFlowSharp)
 
